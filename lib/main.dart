@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:navigasi_rute/item_page.dart';
+
+import 'home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    initialRoute: '/',
+    routes:{
+      '/' : (context) => HomePage(),
+      '/item' : (context) => ItemPage(),
+    },
+));
+
 }
 
 class MyApp extends StatelessWidget {
@@ -12,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      initialRoute: ,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -76,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        
+
       )
      // This trailing comma makes auto-formatting nicer for build methods.
     );
